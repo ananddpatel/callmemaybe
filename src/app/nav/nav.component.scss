@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.active {
+  border-bottom: 0.2rem solid $main-color;
+  font-weight: 600;
+}
+
+.profile-photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+nav li {
+  a {
+    // text-transform: uppercase;
+    font-weight: 600;
+    & :hover {
+      color: $main-color;
+    }
+  }
+  :hover {
+    :not(img) {
+      border-bottom: 0.2rem solid $main-color;
+    }
+  }
+}

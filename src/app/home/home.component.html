@@ -1,0 +1,18 @@
+<div class="py-5">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li ngbNavItem="schedule">
+      <a ngbNavLink routerLink=".">Schedule</a>
+    </li>
+    <li ngbNavItem="registered-numbers">
+      <a ngbNavLink routerLink="numbers">Registered Numbers</a>
+    </li>
+    <li ngbNavItem="history">
+      <a ngbNavLink routerLink="history">History</a>
+    </li>
+    <li ngbNavItem="billing">
+      <a ngbNavLink routerLink="billing">Billing</a>
+    </li>
+  </ul>
+</div>
+
+<router-outlet ></router-outlet>

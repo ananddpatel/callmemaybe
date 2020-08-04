@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="$router_link-active$">CallMeMaybe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex">
+        <ng-container *ngIf="auth.user$ | async as user else loginbtn">
+          <li class="nav-item">
+            <a class="btn btn-link" (click)="auth.signOutWithConfirm()">Logout</a>
+          </li>
+          <li class="nav-item">
+            <img class="profile-photo" [src]="user.photoURL" alt="">
+          </li>
+        </ng-container>
+        <ng-template #loginbtn>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]="['/']" routerLinkActive="active"
+               [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+          </li>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>

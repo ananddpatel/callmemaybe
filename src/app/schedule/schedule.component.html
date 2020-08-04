@@ -1,0 +1,102 @@
+<!-- Button trigger modal -->
+<button class="btn btn-primary" (click)="open(addReminder)">
+  + Add Reminder
+</button>
+
+<!-- Modal -->
+<ng-template #addReminder let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Reminder</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addReminderForm">
+      <div class="form-group">
+        <label for="reminder">Reminder</label>
+        <input
+          formControlName="title"
+          class="form-control"
+          id="reminder"
+          placeholder="New reminder"
+        />
+      </div>
+      <div class="form-group">
+        <label for="callsay">What to say</label>
+        <textarea
+          formControlName="voiceCallSay"
+          class="form-control"
+          id="voicesay"
+          placeholder="What the call will say"
+        ></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="phonenumber">Phone number</label>
+
+          <select
+            formControlName="phoneNumber"
+            class="form-control"
+            name="phonenumber"
+            id="phonenumber"
+          >
+            <option
+              *ngFor="let num of numberService.verifiedNumbers"
+              [value]="num.phoneNum"
+              >{{ num.title }} | {{ num.phoneNum }}</option
+            >
+          </select>
+        </div>
+        <div class="form-group col-6">
+          <label for="timezone">Timezone</label>
+          <select class="form-control" name="timezone" id="timezone">
+            <option
+              *ngFor="let num of numberService.verifiedNumbers"
+              [value]="num.phoneNum"
+              >{{ num.title }}</option
+            >
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="date">Date</label>
+          <input
+            formControlName="date"
+            required
+            type="date"
+            class="form-control"
+            name="date"
+            id="date"
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="time">Time</label>
+          <input
+            formControlName="time"
+            type="time"
+            class="form-control"
+            name="time"
+            id="time"
+          />
+          <!-- <ngb-timepicker
+            [meridian]="true"
+            name="time"
+            id="time"
+          ></ngb-timepicker> -->
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="saveReminder(modal)">
+      Save
+    </button>
+  </div>
+</ng-template>

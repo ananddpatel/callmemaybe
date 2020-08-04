@@ -1,0 +1,32 @@
+//@import './other.scss';
+/* Importing Bootstrap SCSS file. */
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  // line-height: 1.2;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: #243446;
+  font-weight: 600;
+}
+
+.modal-content {
+  border-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.modal-header,
+.modal-footer {
+  border: 0px;
+}

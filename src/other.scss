@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    /* font-family: 'Segoe UI', !important; */
+    background: #f1e8d6;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'DM Serif Display', serif;
+    color: #252e42;
+  }
+  
+  .navbar-brand {
+    color: #252e42 !important;
+  }
+  
+  .hero {
+    position: relative;
+    padding-top: 10vh;
+    padding-bottom: 10rem;
+  
+    background: radial-gradient(at 50% 100%, rgb(66, 142, 192), rgb(51, 30, 30));
+    border-radius: 1rem;
+  }
+  
+  .btn-main {
+    background: #57cbcf;
+  }
+  
+  #hero,
+  nav.navbar {
+    background: #f1e8d6;
+  }
+  
+  .hero-left h1 {
+    font-size: 4rem;
+  }
+  .hero-left ul {
+    list-style: none;
+    display: inline;
+  }
+  .hero-left ul li::before {
+    content: '✔️';
+  }
+  
+  .hero-right {
+    background: url('assets/blob1.svg');
+    background-repeat: round;
+    background-size: contain;
+  }
+  
+  .navbar-brand {
+    font-family: 'DM Serif Display', serif !important;
+    font-size: 1.8rem;
+  }
+  
+  #benefits {
+    background: #fbf7f1;
+  }
+  
+  #benefits h1 {
+    font-size: 4rem;
+  }
+  
+  #benefits img {
+    width: 100%;
+  }
+  
+  #benefits-list {
+    background-repeat: no-repeat;
+  }
+  
+  .benefit {
+    margin: 1rem 0rem;
+    max-width: 20rem;
+  }
+  
+  .benefit span {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .large-heading {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  #why .card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  #signup img {
+    background: #fbf7f1;
+  }
+  
+  /* #signup h1 {
+    position: relative;
+    bottom: 75px;
+  } */
